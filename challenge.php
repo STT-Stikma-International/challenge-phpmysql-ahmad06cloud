@@ -8,15 +8,15 @@ $email = $_POST['email'];
 
 
 //TODO: insert nama, nim, kelas, email
-// $sql = "INSERT INTO mahasiswa (nama , nim , kelas , email) VALUES ('$nama' , '$nim' , '$kelas' , '$email')";
-// // ---
-// if ($conn->query($sql) === TRUE) {
-//     echo "Data berhasil disimpan";
-// } else {
-//     echo "Error: " . $conn->error;
-// }
+$sql = "INSERT INTO mahasiswa (nama , nim , kelas , email) VALUES ('$nama' , '$nim' , '$kelas' , '$email')";
+// ---
+if ($conn->query($sql) === TRUE) {
+    echo "Data berhasil disimpan";
+} else {
+    echo "Error: " . $conn->error;
+}
 
-// $conn->close();
+$conn->close();
 
 
 
@@ -42,8 +42,8 @@ $email = $_POST['email'];
 
 
 //TODO: SELECT data mahasiswa
-// $sql = "SELECT id, nama, nim, kelas, email FROM mahasiswa";
-// $result = $conn->query($sql);
+$sql = "SELECT id, nama, nim, kelas, email FROM mahasiswa";
+$result = $conn->query($sql);
 // ---
 if ($result->num_rows > 0) {
 
@@ -71,7 +71,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "Data tidak ditemukan";
 }
-// $conn->close();
+$conn->close();
 
 
 
